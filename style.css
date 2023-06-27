@@ -18,10 +18,15 @@
 header {
     background-color: var(--bg-heading);
     text-align: center;
+    padding: 3.2rem 0;
+}
+header img {    
+    width: clamp(16.6rem, 16.6rem + 5vw, 20.0rem);    
+    margin-bottom: 3.2rem;
 }
 header h1 {
     color: var(--color-primary);
-    text-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 .2rem .2rem 0 rgba(0, 0, 0, 0.25);
     font-size: 4rem;
     font-family: Staatliches;
     line-height: 3.4rem;
@@ -47,9 +52,15 @@ section p{
     text-align: center;
     font-size: 2rem;
     font-family: Palanquin;
-    line-height: 1.5rem;
+    line-height: 2.3rem;
 
     margin: 1.4rem 0 6.3rem;
+}
+.gallery {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
 }
 .card {
     text-align: center;
@@ -62,6 +73,12 @@ section p{
     filter: brightness(0.5) saturate(0);
     transition: all 200ms;
 }
+.card img:hover {
+    filter: brightness(1);
+  
+    transform: scale(1.1);
+    opacity: .4;
+  }
 .card a {
     text-decoration: none;
     color: var(--color-card);
@@ -80,7 +97,7 @@ section p{
 }
 
 @media (max-width: 1440px) {
-    header p {
+    header p, footer {
         display: none;
     }
 }
