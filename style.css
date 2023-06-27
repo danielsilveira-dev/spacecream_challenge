@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #FFFFFF;
+    --bg-title: #CBC0D3;
+    --color-heading: #23053A;
+    --bg-heading: #8E9AAF;
+    --color-card: #4A4E69;
+    --bg-card: #FEEAFA;
+
+    font-size: 62.5%;
+}
+
+header {
+    background-color: var(--bg-heading);
+    text-align: center;
+}
+header h1 {
+    color: var(--color-primary);
+    text-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    font-size: 4rem;
+    font-family: Staatliches;
+    line-height: 3.4rem;
+    letter-spacing: .2rem;
+
+    background-color: var(--bg-title);
+    padding: .8rem 0;
+}
+header p {
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 2.4rem;
+    font-family: Roboto;
+    line-height: 2rem;
+}
+
+main {
+    background-color: var(--bg-main);
+    padding: 1.4rem 3.2rem;
+}
+section p{
+    color: var(--color-heading);
+    text-align: center;
+    font-size: 2rem;
+    font-family: Palanquin;
+    line-height: 1.5rem;
+
+    margin: 1.4rem 0 6.3rem;
+}
+.card {
+    text-align: center;
+    position: relative;
+}
+.card img {
+    /* opacity: .2; */
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.5) saturate(0);
+    transition: all 200ms;
+}
+.card a {
+    text-decoration: none;
+    color: var(--color-card);
+    font-size: 2rem;
+    font-family: Staatliches;
+    line-height: 3.4rem;
+    letter-spacing: .1rem;
+    background-color: var(--bg-card);
+    padding: .1rem 2.3rem;
+    border-radius: 2rem;
+
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    z-index: 2;
+}
+
+@media (max-width: 1440px) {
+    header p {
+        display: none;
+    }
+}
