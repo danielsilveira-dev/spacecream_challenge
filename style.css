@@ -97,12 +97,6 @@ section p{
     right: 1.6rem;
     z-index: 2;
 }
-
-@media (max-width: 1440px) {
-    header p, footer {
-        display: none;
-    }
-}
 @media (min-width: 900px) {
     .gallery {
         grid-template-columns: 1fr 1fr;
@@ -130,3 +124,74 @@ section p{
         grid-area: F;
     }
 }
+@media (max-width: 1440px) {
+    header p, footer {
+        display: none;
+    }
+}
+@media (min-width: 1440px) {
+    .page {
+        display: grid;
+        grid-template-columns: 377px 1fr;
+    }
+    header h1 {
+        margin-bottom: 3.2rem;
+    }
+    header p {
+        width: 25.5rem;
+        margin: 0 auto;
+        color: #FFF;
+        text-align: center;
+        font-size: 2.4rem;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2rem;
+    }
+    main {
+        padding: 6.4rem 9.8rem;
+    }
+    section p {
+        display: none;
+    }
+    .gallery {
+        display: grid;
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        grid-template-areas: "A C E"
+                             "B C F"
+                             "B D F";
+    }
+    .gallery .card:nth-child(1){
+        grid-area: A;
+    }
+    .gallery .card:nth-child(2){
+        grid-area: B;
+    }
+    .gallery .card:nth-child(3){
+        grid-area: C;
+    }
+    .gallery .card:nth-child(4){
+        grid-area: D;
+    }
+    .gallery .card:nth-child(5){
+        grid-area: E;
+    }
+    .gallery .card:nth-child(6){
+        grid-area: F;
+    }
+    .gallery .card {
+        width: 220px;
+    }
+    footer p {
+        color: #4A4E69;
+        text-align: center;
+        font-size: 14px;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+    }
+}
+
+
+
