@@ -97,6 +97,7 @@ section p{
     right: 1.6rem;
     z-index: 2;
 }
+
 @media (min-width: 900px) {
     .gallery {
         grid-template-columns: 1fr 1fr;
@@ -124,11 +125,8 @@ section p{
         grid-area: F;
     }
 }
-@media (max-width: 1440px) {
-    header p, footer {
-        display: none;
-    }
-}
+
+
 @media (min-width: 1440px) {
     .page {
         display: grid;
@@ -192,6 +190,8 @@ section p{
         line-height: 28px;
     }
 }
-
-
-
+@media (max-width: 1439px) {
+    header p, footer {
+        display: none;
+    }
+}
