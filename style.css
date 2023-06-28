@@ -50,11 +50,11 @@ main {
 section p{
     color: var(--color-heading);
     text-align: center;
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 1.6rem + 1vw, 2rem);
     font-family: Palanquin;
     line-height: 2.3rem;
 
-    margin: 1.4rem 0 6.3rem;
+    margin: 1.4rem auto 6.3rem;
 }
 .gallery {
     display: grid;
@@ -80,15 +80,17 @@ section p{
     opacity: .4;
   }
 .card a {
-    text-decoration: none;
     color: var(--color-card);
+    text-decoration: none;
     font-size: 2rem;
     font-family: Staatliches;
     line-height: 3.4rem;
     letter-spacing: .1rem;
-    background-color: var(--bg-card);
-    padding: .1rem 2.3rem;
+    
     border-radius: 2rem;
+    padding: .1rem 2.3rem;
+    margin: 2rem;
+    background-color: var(--bg-card);
 
     position: absolute;
     top: 1.6rem;
@@ -99,5 +101,32 @@ section p{
 @media (max-width: 1440px) {
     header p, footer {
         display: none;
+    }
+}
+@media (min-width: 900px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "A B"
+        "C B"
+        "C D"
+        "E F";
+    }
+    .gallery .card:nth-child(1){
+        grid-area: A;
+    }
+    .gallery .card:nth-child(2){
+        grid-area: B;
+    }
+    .gallery .card:nth-child(3){
+        grid-area: C;
+    }
+    .gallery .card:nth-child(4){
+        grid-area: D;
+    }
+    .gallery .card:nth-child(5){
+        grid-area: E;
+    }
+    .gallery .card:nth-child(6){
+        grid-area: F;
     }
 }
