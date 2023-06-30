@@ -148,6 +148,9 @@ section p{
     main {
         padding: 6.4rem 9.8rem;
     }
+    section {
+        margin-bottom: 5rem;
+    }
     section p {
         display: none;
     }
